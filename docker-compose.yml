@@ -1,0 +1,8 @@
+web:
+  build: .
+  ports:
+    - "8080:80"
+    - "666:666"
+    - "999:999"
+  volumes:
+    - ~\work\js\imad_inventory\:/var/imad_inventory

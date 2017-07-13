@@ -1,0 +1,20 @@
+upstream webservice {
+    server 127.0.0.1:3000;
+}
+
+server {
+    listen 80;
+    server_name localhost
+
+    # logs
+    access_log /var/log/babel/access.log;
+    error_log /var/log/babel/error.log;
+
+    location /robots.txt {
+        alias /var/imad_inventory/env/nginx/robots_preprod.txt;
+    }
+
+    location / {
+        proxy_pass http://webservice;
+    }
+}
