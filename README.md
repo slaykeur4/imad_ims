@@ -3,9 +3,6 @@
 
 ## Author
 Imad Maadadi
-    
-## db pass
-    pass : ?9d-E>rYBk_
 
 ## How to use
     Build Docker container from docker-compose
